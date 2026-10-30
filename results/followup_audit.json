@@ -1,0 +1,257 @@
+{
+  "inputs": {
+    "results\\loss_record_replicates.parquet": "eb1621776420a56d5b5f105d11890f76e0b5acd61463ce97bfec868c3c54b17f"
+  },
+  "configuration": "Non-Solar, Bernoulli p=.1, one checkpoint/datagram, no protection; pooled terminal events within each repeat",
+  "replicates": [
+    {
+      "repeat": 0,
+      "terminal_erased": 63,
+      "conditional_events": 59,
+      "detected": 59,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.9365079365079365
+    },
+    {
+      "repeat": 1,
+      "terminal_erased": 74,
+      "conditional_events": 64,
+      "detected": 64,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.8648648648648649
+    },
+    {
+      "repeat": 2,
+      "terminal_erased": 70,
+      "conditional_events": 66,
+      "detected": 66,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.9428571428571428
+    },
+    {
+      "repeat": 3,
+      "terminal_erased": 82,
+      "conditional_events": 72,
+      "detected": 72,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.8780487804878049
+    },
+    {
+      "repeat": 4,
+      "terminal_erased": 62,
+      "conditional_events": 57,
+      "detected": 57,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.9193548387096774
+    },
+    {
+      "repeat": 5,
+      "terminal_erased": 64,
+      "conditional_events": 57,
+      "detected": 57,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.890625
+    },
+    {
+      "repeat": 6,
+      "terminal_erased": 72,
+      "conditional_events": 63,
+      "detected": 63,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.875
+    },
+    {
+      "repeat": 7,
+      "terminal_erased": 74,
+      "conditional_events": 66,
+      "detected": 66,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.8918918918918919
+    },
+    {
+      "repeat": 8,
+      "terminal_erased": 72,
+      "conditional_events": 61,
+      "detected": 61,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.8472222222222222
+    },
+    {
+      "repeat": 9,
+      "terminal_erased": 67,
+      "conditional_events": 61,
+      "detected": 61,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.9104477611940298
+    },
+    {
+      "repeat": 10,
+      "terminal_erased": 54,
+      "conditional_events": 50,
+      "detected": 50,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.9259259259259259
+    },
+    {
+      "repeat": 11,
+      "terminal_erased": 65,
+      "conditional_events": 53,
+      "detected": 53,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.8153846153846154
+    },
+    {
+      "repeat": 12,
+      "terminal_erased": 71,
+      "conditional_events": 64,
+      "detected": 64,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.9014084507042254
+    },
+    {
+      "repeat": 13,
+      "terminal_erased": 63,
+      "conditional_events": 55,
+      "detected": 55,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.873015873015873
+    },
+    {
+      "repeat": 14,
+      "terminal_erased": 72,
+      "conditional_events": 62,
+      "detected": 62,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.8611111111111112
+    },
+    {
+      "repeat": 15,
+      "terminal_erased": 71,
+      "conditional_events": 66,
+      "detected": 66,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.9295774647887324
+    },
+    {
+      "repeat": 16,
+      "terminal_erased": 75,
+      "conditional_events": 67,
+      "detected": 67,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.8933333333333333
+    },
+    {
+      "repeat": 17,
+      "terminal_erased": 73,
+      "conditional_events": 66,
+      "detected": 66,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.9041095890410958
+    },
+    {
+      "repeat": 18,
+      "terminal_erased": 64,
+      "conditional_events": 57,
+      "detected": 57,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.890625
+    },
+    {
+      "repeat": 19,
+      "terminal_erased": 83,
+      "conditional_events": 68,
+      "detected": 68,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.8192771084337349
+    },
+    {
+      "repeat": 20,
+      "terminal_erased": 79,
+      "conditional_events": 75,
+      "detected": 75,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.9493670886075949
+    },
+    {
+      "repeat": 21,
+      "terminal_erased": 71,
+      "conditional_events": 63,
+      "detected": 63,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.8873239436619719
+    },
+    {
+      "repeat": 22,
+      "terminal_erased": 78,
+      "conditional_events": 67,
+      "detected": 67,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.8589743589743589
+    },
+    {
+      "repeat": 23,
+      "terminal_erased": 75,
+      "conditional_events": 71,
+      "detected": 71,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.9466666666666667
+    },
+    {
+      "repeat": 24,
+      "terminal_erased": 85,
+      "conditional_events": 78,
+      "detected": 78,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.9176470588235294
+    },
+    {
+      "repeat": 25,
+      "terminal_erased": 71,
+      "conditional_events": 56,
+      "detected": 56,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.7887323943661971
+    },
+    {
+      "repeat": 26,
+      "terminal_erased": 63,
+      "conditional_events": 58,
+      "detected": 58,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.9206349206349206
+    },
+    {
+      "repeat": 27,
+      "terminal_erased": 63,
+      "conditional_events": 56,
+      "detected": 56,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.8888888888888888
+    },
+    {
+      "repeat": 28,
+      "terminal_erased": 67,
+      "conditional_events": 63,
+      "detected": 63,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.9402985074626866
+    },
+    {
+      "repeat": 29,
+      "terminal_erased": 74,
+      "conditional_events": 68,
+      "detected": 68,
+      "conditional_rate": 1.0,
+      "unconditional_rate": 0.918918918918919
+    }
+  ],
+  "conditional_mean": 1.0,
+  "conditional_SD": 0.0,
+  "unconditional_mean": 0.8929347219159983,
+  "unconditional_SD": 0.040143103091136535,
+  "passed": true,
+  "paper": 2,
+  "analysis_seed": null,
+  "status": "exploratory post-result supplement; original results unchanged",
+  "source_simulation_seed": 20261030
+}

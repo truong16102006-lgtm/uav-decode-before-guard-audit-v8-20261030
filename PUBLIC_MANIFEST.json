@@ -6,6 +6,11 @@
       "bytes": 3461
     },
     {
+      "path": "FOLLOWUP_20261031_VI.md",
+      "sha256": "909d960e1b3bf3c1debf9b2a32045104dd58d482d3a2c31ced57271d2042bfe2",
+      "bytes": 1211
+    },
+    {
       "path": "NOT_COMPLETED_VI.md",
       "sha256": "8f50f5615a1d2835a33addd16a4f2e6dc00dc3efcd35f2338d181727bfc5ec23",
       "bytes": 1761
@@ -89,6 +94,11 @@
       "path": "code/finish_current.py",
       "sha256": "57d0f0aa959525eba33d0e81a8c08261c9aebb26eb73ce4d762ea9df8b61e429",
       "bytes": 2431
+    },
+    {
+      "path": "code/followup_audit.py",
+      "sha256": "58609236a8764b54e43ef6f8ba4c2ec9777568f029b3c7513a34ed5332d77209",
+      "bytes": 5240
     },
     {
       "path": "code/kernels.py",
@@ -216,9 +226,14 @@
       "bytes": 225
     },
     {
+      "path": "results/followup_audit.json",
+      "sha256": "7cccdfdd7124f55478ec8b87e8ec3c3e382d76062b17fda58a078a873a2f4ac9",
+      "bytes": 6634
+    },
+    {
       "path": "results/gate.json",
-      "sha256": "2f4d2b024690108d470dcafc57eaa2d2fa11340a0aabe967a2e97b2529f44ce5",
-      "bytes": 2841
+      "sha256": "dde4b7a9f374e0e48e4fc7f70925f2795c393218d5eded441b6dc5f2805d35e6",
+      "bytes": 2936
     },
     {
       "path": "results/heatmap_gate.json",
