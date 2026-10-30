@@ -17,4 +17,8 @@
 | P5 | Grid 3×3 power×energy, strict/escape, completion và effective byte rate | heatmap CSV/PDF |
 | P6 | Code/results công khai khi đã kiểm chứng và quét secret, dữ liệu ngoài giữ điều khoản gốc | trạng thái public release thật, không DOI |
 
-Đây là kế hoạch đối chiếu mã và bằng chứng, không phải xác nhận rằng các thí nghiệm v8 đã chạy xong. Trạng thái hoàn tất chỉ lấy từ các gate đã sinh thật và kiểm tra PDF sau cùng. Abstract, Introduction và Related Work giữ nguyên văn. Không sửa các câu mở đầu chỉ để làm kết quả mới thuận lợi hơn.
+Các thí nghiệm trong bảng đã chạy và kết quả được đối chiếu bằng gate thực tế. Kiểm chứng sau cùng đã giải mã 24.080 wire, kiểm tra 2.146.616 đoạn liên tục và 16.089 đoạn escape, giữ nguyên 236 file v7 cùng 273 file bảo vệ của Paper 4. Chi tiết số mới và các kết quả bất lợi nằm trong `KET_QUA_V8_VI.md`.
+
+Abstract, Introduction và Related Work giữ nguyên văn. Các lỗi exponent ZFP và clock Solar có amendment riêng, checkpoint lỗi được lưu và không trộn vào kết quả chính. TOST Swing thường là bổ sung exploratory sau khi đã xem kết quả, tách biệt họ energy-aware Swing đã khai báo trước. Tên journal được viết tắt, danh sách tác giả tham khảo dài dùng et al. và DOI bài báo được lược khỏi PDF để tiết kiệm chỗ; metadata cùng liên kết đầy đủ vẫn được lưu trong bằng chứng.
+
+Repo công khai được xác minh bằng commit trong `audit/public_release.json`. Không phát hành raw source hay bản thảo/tác giả chưa chốt, không tạo Zenodo hoặc DOI. Chưa đo MCU, không khẳng định tiết kiệm năng lượng vô tuyến. Trạng thái PDF và ZIP sau cùng phải lấy từ audit render, visual review và package.

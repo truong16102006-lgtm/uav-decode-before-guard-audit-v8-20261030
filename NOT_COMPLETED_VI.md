@@ -1,6 +1,6 @@
 # Giới hạn cần giữ rõ
 
-Trạng thái hiện tại của thí nghiệm lấy từ gate đã chạy, không từ sự tồn tại của mã nguồn. Trong giai đoạn chuẩn bị này chưa có xác nhận toàn bộ v8 hoàn tất.
+Các nhánh thí nghiệm v8 khả thi đã chạy và qua kiểm chứng số. Những giới hạn dưới đây vẫn giữ nguyên, còn trạng thái PDF/ZIP cuối cùng lấy từ audit thực tế.
 
 - Zenodo và DOI được hoãn theo chỉ đạo trực tiếp của người dùng vì danh sách tác giả chưa chốt. Không tạo record và không công bố DOI.
 - Chưa có đo chu kỳ Cortex-M hay MCU thật. Numba trên CPU phát triển không thay thế bằng chứng phần cứng nhúng hoặc worst-case execution.

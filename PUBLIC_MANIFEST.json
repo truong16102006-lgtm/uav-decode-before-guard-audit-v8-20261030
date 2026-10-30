@@ -2,13 +2,13 @@
   "files": [
     {
       "path": "CHANGELOG_VI.md",
-      "sha256": "14e9cd8070b8fde1a4419915ecdae949e7c09d84d8de15486fd939f7a3908038",
-      "bytes": 2518
+      "sha256": "d130fe16173a0435fd2d68932494a5c209413f96dad8cd18932270b49d2e4700",
+      "bytes": 3461
     },
     {
       "path": "NOT_COMPLETED_VI.md",
-      "sha256": "82a3fcf1e2e99c24b754504e0ad8d403ae3efc50eae9339cc1b748b5fbb45ffa",
-      "bytes": 1765
+      "sha256": "8f50f5615a1d2835a33addd16a4f2e6dc00dc3efcd35f2338d181727bfc5ec23",
+      "bytes": 1761
     },
     {
       "path": "PROTOCOL.md",
@@ -117,8 +117,8 @@
     },
     {
       "path": "code/report_v8.py",
-      "sha256": "80c509c66bad938c620eccf436fa6dde36b43a5fba940fc26591bca57c7ea6cb",
-      "bytes": 18623
+      "sha256": "da5239d92bbe22b37c3ee3604a2f9c5ff5091b65452bce34e8848b7a1f2444bb",
+      "bytes": 18876
     },
     {
       "path": "code/run_suite.py",

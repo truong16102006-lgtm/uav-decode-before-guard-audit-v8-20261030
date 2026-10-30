@@ -10,7 +10,7 @@ def table(name,caption,label,heads,rows,small=True):
       'refusals':'First failed Strict guard with 120 s counts by profile and full-episode counts over all three profiles',
       'baselines':'Non-Solar guard completion and all-attempt native/common byte percentages balanced by source and acquisition cluster',
       'horizon':'Medium completion and paired-oracle byte gaps in Strict/Horizon2/Horizon4 order, with input count N and graph-feasible Oracle count',
-      'effects':r'Escape-minus-control common-recoding differences in percentage points with cluster HL estimates, 95\% intervals and Holm-adjusted wild p values',
+      'effects':r'Escape-minus-control common-byte differences in percentage points with cluster HL [95\% interval] above the Holm-adjusted wild p value in each cell',
       'drift':'Full-episode Strict paths with alternative energy decoders showing matched support, energy-budget violations and maximum continuous error',
       'loss':r'Certified duration and anchor availability for m=1/16 under 10\% loss with thirty-replicate mean/SD and framed-byte multiplier, while Fig.\ \ref{fig:v8_loss} also includes m=4',
     }
@@ -83,15 +83,15 @@ def run():
         rows.append([ds,*cells])
     table('effects','Escape-minus-control common-byte differences in percentage points with cluster HL and 95\\% interval above the Holm-adjusted wild p value in each cell','tab:v8_effects',['Source','SwingIso','SwingEnergy','ZFPIso','Native32'],rows,small=False)
     effect_path=ROOT/'paper/v8_effects.tex'
-    effect_path.write_text(effect_path.read_text(encoding='utf8').replace(r'\centering',r'\centering\footnotesize').replace(r'\tabcolsep}{3pt}',r'\tabcolsep}{1pt}'),encoding='utf8')
+    effect_path.write_text(effect_path.read_text(encoding='utf8').replace(r'\centering',r'\centering\footnotesize').replace(r'\tabcolsep}{3pt}',r'\tabcolsep}{2pt}'),encoding='utf8')
     drift=pd.read_csv(DEV/'results/matched_path_drift.csv');rows=[]
     for ds in ['IDF','CMU','AMOVFLY','Solar']:
         violations=[];maxima=[]
         for method in ['DeltaNaiveSamePath','DeltaFeedbackSamePath','LinearSamePath']:
             a=drift.query('dataset==@ds and method==@method');okay=a.status=='OK'
-            violations.append(str(int((a.loc[okay,'energy_max_Wh']>.001+1e-12).sum())));maxima.append(fmt(a.loc[okay,'energy_max_Wh'].max(),5))
+            violations.append(str(int((a.loc[okay,'energy_max_Wh']>.001+1e-12).sum())));maxima.append(fmt(1000*a.loc[okay,'energy_max_Wh'].max(),3))
         rows.append([ds,f'{okay.sum()}/{len(a)}','/'.join(violations),'/'.join(maxima)])
-    table('drift','Matched full-episode Strict paths with violation counts and maximum Wh errors ordered naive increments/feedback increments/linear resets','tab:v8_drift',['Source','Paths','Violations N/F/L','Max Wh N/F/L'],rows)
+    table('drift','Matched full-episode Strict paths with violation counts and maximum mWh errors ordered naive increments/feedback increments/linear resets','tab:v8_drift',['Source','Paths','Violations N/F/L','Max mWh N/F/L'],rows)
     loss=pd.read_csv(DEV/'results/loss_replicates.csv');rows=[]
     for channel in ['Bernoulli','GilbertElliott']:
         for m in [1,16]:
@@ -107,30 +107,32 @@ def run():
     legacy=pd.read_csv(DEV/'results/legacy_36_Holm.csv');rows=[]
     shorten=lambda value:value.replace('DBG_var_','V').replace('DBG_fixed_','F').replace('DBG_cert_','Cert')
     for _,z in legacy.iterrows():rows.append([z.source.replace('NON_SOLAR','Non-Solar'),shorten(z.method_a),shorten(z.method_b),fmtp(z.p_raw),fmtp(z.p_holm)])
-    short=lambda s:s.replace('Non-Solar','N').replace('AMOVFLY','A').replace('IDF','I').replace('CMU','C').replace('Cert','C').replace('medium','m').replace('fine','f').replace('coarse','c').replace('Swing','Sw').replace('SlideCore','Sl').replace('Native','Nat')
+    short=lambda s:s.replace('Non-Solar','N').replace('AMOVFLY','A').replace('IDF','I').replace('CMU','C').replace('Cert','C').replace('medium','m').replace('fine','f').replace('coarse','c').replace('Swing','Sw').replace('SlideCore','Sl').replace('Native','Nat').replace('DPvertical','DP')
     def shortp(s):
         if r'\!\times\!10^{' in s:
             coefficient,tail=s[1:].split(r'\!\times\!10^{')
             return '$'+format(float(coefficient),'.2g')+r'\mathrm{e}{'+tail
         return s.removeprefix('0') if s.startswith('0.') else s
     rows=[[short(s) if j<3 else shortp(s) for j,s in enumerate(row)] for row in rows]
+    rows=[[r[0],r[1]+'/'+r[2],r[3],r[4]] for r in rows]
     rows=[rows[j]+rows[j+12]+rows[j+24] for j in range(12)]
-    table('legacy_holm','All 36 original tests with raw and Holm p values, with sources I/C/A/N denoting IDF/CMU/AMOVFLY/non-Solar, V/F/C denoting variable/fixed/certificate, f/m/c denoting fine/medium/coarse and Sw/Sl/Nat denoting Swing/Slide/Native','tab:v8_legacy_holm',['S','A','B','$p$','$p_H$']*3,rows,small=False)
+    table('legacy_holm','All 36 original pairwise tests with raw and Holm p values, with sources I/C/A/N denoting IDF/CMU/AMOVFLY/non-Solar, V/F/C denoting variable/fixed/certificate, f/m/c denoting fine/medium/coarse and Sw/Sl/DP denoting Swing/Slide/Douglas--Peucker','tab:v8_legacy_holm',['S','Pair','$p$','$p_H$']*3,rows)
     compact_table=ROOT/'paper/v8_legacy_holm.tex'
-    compact_table.write_text(compact_table.read_text(encoding='utf8').replace(r'\centering',r'\centering\footnotesize').replace(r'\tabcolsep}{3pt}',r'\tabcolsep}{0.1pt}'),encoding='utf8')
+    compact_table.write_text(compact_table.read_text(encoding='utf8').replace(r'\tabcolsep}{3pt}',r'\tabcolsep}{1pt}').replace('{lrrrrrrrrrrr}',r'{@{}lrrr@{\hspace{5pt}}lrrr@{\hspace{5pt}}lrrr@{}}'),encoding='utf8')
     # A compact traceability table complements machine-readable full paths in
     # the reproducibility package without local filesystem paths in the paper.
     claims=r'''\begin{table}[!htbp]\centering\small
 \caption{Claim boundaries linked to measured evidence and reproducible script identifiers}\label{tab:v8_claim_evidence}
-\begin{tabularx}{\linewidth}{XXX}\toprule
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}\toprule
 Claim & Evidence & Generator\\\midrule
-Continuous guards & 1,200 spans and wire replay & validate\_v8\\
-Bounded escape & support, bytes and 12 knots & experiments\\
-Fixed-graph oracle & two scopes, 718 graphs each & validate\_v8\\
-Conditional effects & 36 old/42 new cluster tests & statistics\_v8\\
-Drift and CPU & increment wires, warmed guards & extra\_diagnostics\\
+Continuous guards & 1,200 spans, wire replay & validate\_v8\\
+Bounded escape & support/bytes, 12 knots & experiments\\
+Fixed-graph oracle & 2 scopes, 718 graphs & validate\_v8\\
+Conditional effects & 36 old/42 new tests & statistics\_v8\\
+Drift audit & matched increment wires & extra\_diagnostics\\
+Guard timing & increment wires, warmed guards & extra\_diagnostics\\
 Erasure support & 30 repeats, actual frames & loss\_v8\\
-Prepared scope & 718 matched PL references & preprocessing\_v8\\
+Prepared scope & 718 PL matches & preprocessing\_v8\\
 \bottomrule\end{tabularx}\end{table}
 '''
     (ROOT/'paper/v8_claim_evidence.tex').write_text(claims,encoding='utf8')
@@ -167,9 +169,9 @@ def plots(f,full,b,loss):
         a=heat.query('dataset==@ds and method=="Strict"').copy();a['complete']=a.status=='OK';a['byte_rate']=a.effective_bytes/a.duration_s if 'duration_s' in a else a.effective_bytes/120
         for i,col in enumerate(['complete','byte_rate']):
             q=a.groupby(['energy_budget_Wh','power_budget_W','group_id'])[col].mean().groupby(['energy_budget_Wh','power_budget_W']).mean().unstack();values=q.to_numpy()*(100 if col=='complete' else 1)
-            axes[i,j].imshow(values,origin='lower',aspect='auto',cmap='Greys',vmin=0 if col=='complete' else None,vmax=100 if col=='complete' else None)
+            shown=axes[i,j].imshow(values,origin='lower',aspect='auto',cmap='Greys',vmin=0 if col=='complete' else None,vmax=100 if col=='complete' else None)
             for y in range(3):
-                for x in range(3):axes[i,j].text(x,y,f'{values[y,x]:.1f}',ha='center',va='center',color='white' if values[y,x]>values.max()*.6 else 'black')
+                for x in range(3):axes[i,j].text(x,y,f'{values[y,x]:.1f}',ha='center',va='center',color='white' if shown.norm(values[y,x])>.55 else 'black')
             axes[i,j].set(xticks=range(3),xticklabels=[12.5,25,50],yticks=range(3),yticklabels=[.5,1,2],xlabel='Power budget (W)',ylabel='Energy budget (mWh)',title=ds+(' completion %' if i==0 else ' effective B/s'))
     save(fig,'heatmap')
     fig,axes=plt.subplots(1,2,figsize=(5.2,2.4),layout='constrained')
@@ -180,7 +182,7 @@ def plots(f,full,b,loss):
                 q=a.groupby(['rate','repeat']).certified_fraction.mean().groupby('rate').agg(['mean','std'])
                 ax.errorbar(100*q.index,100*q['mean'],yerr=100*q['std'],ls=ls,marker=marker,ms=3,label=f'{m}/{protection}',lw=1)
         ax.set(title=channel,xlabel='Datagram loss (%)',ylabel='Certified duration (%)');ax.grid(alpha=.2)
-    handles,labels=axes[-1].get_legend_handles_labels();fig.legend(handles,labels,fontsize=6.5,ncol=3,loc='upper center',bbox_to_anchor=(.5,1.19));save(fig,'loss')
+    handles,labels=axes[-1].get_legend_handles_labels();fig.legend(handles,labels,fontsize=8,ncol=3,loc='upper center',bbox_to_anchor=(.5,1.23));save(fig,'loss')
     from wire import decode,ESCAPE
     from kernels import cumulative_energy
     source=next(r for r in sorted(records(),key=lambda r:(r['dataset'],str(r['flight_id']))) if r['dataset']=='AMOVFLY' and np.ptp(r['p'][:61])>25)
@@ -195,7 +197,7 @@ def plots(f,full,b,loss):
     er=e[ii]+(p[ii]*dx+.5*(p[ii+1]-p[ii])/(t[ii+1]-t[ii])*dx*dx)/3600
     fig=plt.figure(figsize=(5.4,2.5));ax=fig.add_subplot(121,projection='3d');ax.plot(t,p,e,color='black',lw=.7,label='Prepared reference')
     sc=ax.scatter(tt[::4],pp[::4],ee[::4],c=abs(pp-np.interp(tt,t,p))[::4],s=6,cmap='viridis')
-    ax.set(xlabel='Time (s)',ylabel='Power (W)',zlabel='Energy (Wh)');ax.view_init(24,-60)
+    ax.set(xlabel='Time (s)',ylabel='Power (W)',title='Energy (Wh)');ax.view_init(24,-60)
     bx=fig.add_subplot(122);bx.plot(tt,1000*(ee-er),color='#245b83',lw=.9);bx.axhline(1,color='black',ls='--',lw=.7);bx.axhline(-1,color='black',ls='--',lw=.7)
     bx.set(xlabel='Time (s)',ylabel='Signed energy error (mWh)',ylim=(-1.15,1.15));bx.grid(alpha=.2)
     fig.subplots_adjust(left=.02,right=.87,bottom=.24,top=.93,wspace=.5);cb=fig.add_axes([.94,.29,.014,.55]);fig.colorbar(sc,cax=cb,label='Power error (W)');save(fig,'case')
