@@ -1,0 +1,26 @@
+{
+  "completed": true,
+  "inputs": 718,
+  "repetitions": 30,
+  "record_replicate_rows": 1550880,
+  "seed": 20261030,
+  "channels": [
+    "Bernoulli",
+    "stationary Gilbert-Elliott mean bad run 3 datagrams"
+  ],
+  "packing": [
+    1,
+    4,
+    16
+  ],
+  "protection": [
+    "none",
+    "repeat previous endpoint",
+    "one-erasure XOR blocks of four"
+  ],
+  "bytes": "actual application header, data framing, repeats, parity and EOS; no UDP/IP/radio overhead",
+  "absolute_energy_metric": "left absolute-anchor availability weighted by the following original segment duration; this is not certified interpolation through a gap",
+  "bridge": "uncertified quadratic between surviving nonadjacent endpoints; no leading/trailing extrapolation",
+  "FEC_delay": "retrospective recovery; parity arrival latency is not measured as a live guarantee",
+  "seconds": 256.369297199999
+}

@@ -1,0 +1,114 @@
+{
+  "passed": true,
+  "inputs": 718,
+  "fixed_wires_byte_identical": 2133,
+  "fixed_refusals": 21,
+  "all_main_wires_byte_identical": 9989,
+  "medium_non_solar_complete": "702/706",
+  "check_before_rounding_energy_violations": 36,
+  "greedy_30s_complete": 715,
+  "lookahead_30s_complete": 718,
+  "tables_2_8": [
+    {
+      "table": "profiles",
+      "identical": true
+    },
+    {
+      "table": "baselines",
+      "identical": true
+    },
+    {
+      "table": "distributions",
+      "identical": true
+    },
+    {
+      "table": "ablation",
+      "identical": true
+    },
+    {
+      "table": "lookahead",
+      "identical": true
+    },
+    {
+      "table": "long",
+      "identical": true
+    },
+    {
+      "table": "loss",
+      "identical": true
+    }
+  ],
+  "numerical_files": [
+    {
+      "file": "main_cases",
+      "rows": 10052,
+      "match": true
+    },
+    {
+      "file": "frozen_path_widths",
+      "rows": 2154,
+      "match": true
+    },
+    {
+      "file": "independent_segments",
+      "rows": 1200,
+      "match": true
+    },
+    {
+      "file": "ablation_cases",
+      "rows": 5744,
+      "match": true
+    },
+    {
+      "file": "sensitivity_cases",
+      "rows": 10770,
+      "match": true
+    },
+    {
+      "file": "lookahead_cases",
+      "rows": 1436,
+      "match": true
+    },
+    {
+      "file": "long_cases",
+      "rows": 3638,
+      "match": true
+    },
+    {
+      "file": "loss_cases",
+      "rows": 171360,
+      "match": true
+    },
+    {
+      "file": "cluster_intervals",
+      "rows": 224,
+      "match": true
+    },
+    {
+      "file": "distributions",
+      "rows": 280,
+      "match": true
+    },
+    {
+      "file": "support_and_violations",
+      "rows": 70,
+      "match": true
+    },
+    {
+      "file": "paired_wilcoxon_holm",
+      "rows": 36,
+      "match": true
+    },
+    {
+      "file": "lookahead_headroom",
+      "rows": 8,
+      "match": true
+    },
+    {
+      "file": "sensitivity_summary",
+      "rows": 15,
+      "match": true
+    }
+  ],
+  "elapsed_s": 980.4569271000219
+}

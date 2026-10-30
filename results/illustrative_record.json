@@ -1,0 +1,7 @@
+{
+  "dataset": "AMOVFLY",
+  "flight_id": "FAFS/FAFS/UavY_P0A10S4_1",
+  "criterion": "lexicographically first AMOVFLY record with first-30s power range above 25W; not selected by reconstruction error",
+  "method": "Escape",
+  "profile": "medium"
+}

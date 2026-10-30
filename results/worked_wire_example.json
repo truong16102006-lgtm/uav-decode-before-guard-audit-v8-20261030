@@ -1,0 +1,19 @@
+{
+  "fixture": true,
+  "observed_flight": false,
+  "power_start_W": 100.0,
+  "power_end_W": 120.0,
+  "duration_s": 2.0,
+  "decoded_endpoint_energy_Wh": 0.061111,
+  "correction_W": -0.0002000000000066393,
+  "midpoint_power_W": 109.99969999999999,
+  "encoded_bytes": 56,
+  "footer_bytes": 4,
+  "wire_hex": "554538300000000000000000000000000000e03f9a9999999999b93f8dedb5a0f7c6b03e00000000e8070000010004b009b7dd03ff010004",
+  "power_max_W": 0.00030000000000995897,
+  "energy_max_Wh": 1.1111111111045124e-07,
+  "minimum_power_W": 100.0,
+  "max_segment_s": 2.0,
+  "escape_linear_closure_Wh": 0.0,
+  "passes": true
+}

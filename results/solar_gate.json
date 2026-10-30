@@ -1,0 +1,17 @@
+{
+  "completed": true,
+  "raw_source": "Paper_02_Sparse_Auditing\\development_v8\\data\\source_inputs\\solar\\native_power.parquet",
+  "source_sha256": "6755c3d1f552b10a5de8dc2adbd92dcd630c6dac5a7f25d69c6a90f7628f2b65",
+  "prepared_knots": 592127,
+  "campaign_span_hours": 82.24275276694445,
+  "gap_split_streams": 5,
+  "supported_hours": 82.23916666666666,
+  "elapsed_s": 140.3191489999881,
+  "peak_process_RSS_bytes": 186458112,
+  "sampled_peak_RSS_bytes": 175153152,
+  "RSS_sampling_interval_s": 0.05,
+  "codec_owned_raw_buffer_max": 12,
+  "native_interpolator_batch_rows": 8192,
+  "time_coordinates": "Exact half-second ticks relative to each gap-split stream; source offsets retained in evaluation CSV; no absolute mission-time preservation claim.",
+  "limits": "Campaign span is not claimed to be continuous supported time; gaps/invalid electrical rows start a fresh stream, and each header/footer is charged. Whole-process RSS includes the parquet reader, Python and JIT runtime."
+}

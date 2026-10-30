@@ -1,0 +1,38 @@
+{
+  "completed": true,
+  "inputs": 718,
+  "matched": 718,
+  "statuses": {
+    "OK": 718
+  },
+  "source_provenance": [
+    {
+      "dataset": "IDF",
+      "path": "Paper_02_Sparse_Auditing\\development_v8\\data\\source_inputs\\pixhawk\\pixhawk.parquet",
+      "sha256": "11d6cd3d0363932c0a49e2a21f6f73cbcd600eef9b066ad3a55867cbb5c2b52e",
+      "scope": "retained state-aligned source samples"
+    },
+    {
+      "dataset": "IDF",
+      "path": "Paper_02_Sparse_Auditing\\development_v8\\data\\source_inputs\\speedy\\speedy.parquet",
+      "sha256": "ab33b7e37c321289e8811387b2eaace07b60626e74bce6ddefa394e3ec900b16",
+      "scope": "retained state-aligned source samples"
+    },
+    {
+      "dataset": "CMU",
+      "path": "Paper_02_Sparse_Auditing\\development_v8\\data\\source_inputs\\cmu\\flights.zip",
+      "sha256": "98f65a1ab54a8b618c169fdf49311a53ff1fefed86fdc3f440d6a0166ce49fb1"
+    },
+    {
+      "dataset": "AMOVFLY",
+      "path": "Paper_02_Sparse_Auditing\\development_v8\\data\\source_inputs\\amov\\AMOVFLY_pinned.zip",
+      "sha256": "f30269ff1b622044ab72a9e31e1e51eb5720220364ff9fd8094b54b938ecc580"
+    },
+    {
+      "dataset": "Solar",
+      "path": "Paper_02_Sparse_Auditing\\development_v8\\data\\source_inputs\\solar\\native_power.parquet",
+      "sha256": "6755c3d1f552b10a5de8dc2adbd92dcd630c6dac5a7f25d69c6a90f7628f2b65"
+    }
+  ],
+  "interpretation": "Exact PL-to-PL discrepancy over matched prepared support; triangle bounds do not calibrate physical sensor error."
+}

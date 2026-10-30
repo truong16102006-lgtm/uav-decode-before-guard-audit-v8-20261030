@@ -1,0 +1,9 @@
+{
+  "source_sha256": "f30269ff1b622044ab72a9e31e1e51eb5720220364ff9fd8094b54b938ecc580",
+  "member": "AMOVFLY-Dataset-67069ed00ddbebd62b71aa9bb1272415e9b15ff8/Flight_info.csv",
+  "alias_map": {
+    "mj": "lmj"
+  },
+  "identity": "original dataset collector metadata; not verified pilot identity",
+  "alias_source": "original AMOVFLY README identifies mj/lmj as the same collector"
+}

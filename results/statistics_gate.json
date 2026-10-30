@@ -1,0 +1,10 @@
+{
+  "completed": true,
+  "contrasts": 42,
+  "legacy_Holm_family": 36,
+  "new_Holm_family": 42,
+  "TOST_family": 3,
+  "bootstrap_replicates": 10000,
+  "seed": 20261030,
+  "Solar": "descriptive; excluded from p-value families"
+}

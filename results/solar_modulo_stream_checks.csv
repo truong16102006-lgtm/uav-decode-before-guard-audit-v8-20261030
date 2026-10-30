@@ -1,0 +1,16 @@
+method,segment,checkpoints,wraps,passed
+Strict,0,4289,0,True
+Escape,0,4289,0,True
+SearchEscape,0,4274,0,True
+Strict,1,2,0,True
+Escape,1,2,0,True
+SearchEscape,1,2,0,True
+Strict,2,61547,0,True
+Escape,2,61547,0,True
+SearchEscape,2,61402,0,True
+Strict,3,7,0,True
+Escape,3,7,0,True
+SearchEscape,3,7,0,True
+Strict,4,1015,0,True
+Escape,4,1015,0,True
+SearchEscape,4,1015,0,True

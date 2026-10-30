@@ -1,0 +1,117 @@
+{
+  "passed": true,
+  "continuous_cases": 1200,
+  "max_abs_differences": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "malformed_ULEB_rejections": 5,
+  "sequence_wrap_checkpoints": 65540,
+  "wire_fixtures": [
+    {
+      "horizon": 0,
+      "search": false,
+      "escape": false,
+      "bytes": 114
+    },
+    {
+      "horizon": 0,
+      "search": false,
+      "escape": true,
+      "bytes": 114
+    },
+    {
+      "horizon": 0,
+      "search": true,
+      "escape": false,
+      "bytes": 114
+    },
+    {
+      "horizon": 0,
+      "search": true,
+      "escape": true,
+      "bytes": 114
+    },
+    {
+      "horizon": 2,
+      "search": false,
+      "escape": false,
+      "bytes": 114
+    },
+    {
+      "horizon": 2,
+      "search": false,
+      "escape": true,
+      "bytes": 114
+    },
+    {
+      "horizon": 4,
+      "search": false,
+      "escape": false,
+      "bytes": 114
+    },
+    {
+      "horizon": 4,
+      "search": false,
+      "escape": true,
+      "bytes": 114
+    }
+  ],
+  "forced_escape_fixture": {
+    "strict_status": "ADJACENT_NONNEGATIVITY",
+    "escape_segments": 1,
+    "search_changed": 1,
+    "continued_segments": 2,
+    "constructed_not_observed": true
+  },
+  "transport_fixtures": [
+    {
+      "m": 1,
+      "protection": "none",
+      "bytes": 62
+    },
+    {
+      "m": 1,
+      "protection": "repeat",
+      "bytes": 69
+    },
+    {
+      "m": 1,
+      "protection": "xor",
+      "bytes": 79
+    },
+    {
+      "m": 4,
+      "protection": "none",
+      "bytes": 59
+    },
+    {
+      "m": 4,
+      "protection": "repeat",
+      "bytes": 59
+    },
+    {
+      "m": 4,
+      "protection": "xor",
+      "bytes": 82
+    },
+    {
+      "m": 16,
+      "protection": "none",
+      "bytes": 59
+    },
+    {
+      "m": 16,
+      "protection": "repeat",
+      "bytes": 59
+    },
+    {
+      "m": 16,
+      "protection": "xor",
+      "bytes": 82
+    }
+  ],
+  "seconds": 2.086623100010911,
+  "seed": 20261030
+}

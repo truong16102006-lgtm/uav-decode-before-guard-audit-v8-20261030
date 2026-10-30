@@ -1,0 +1,14 @@
+{
+  "completed": true,
+  "records": 24,
+  "warmup_excluded": true,
+  "cpu_affinity": [
+    0
+  ],
+  "library_threads": 1,
+  "hardware": "13th Gen Intel(R) Core(TM) i7-13620H",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "rss_bytes": 167649280,
+  "MCU": "not measured; no verified Cortex-M emulator configured",
+  "complexity": "B=floor(L/h); greedy at most 9 rounding candidates times O(B) guard work per sample; byte oracle O(N B^2) work and O(N) state, streaming horizon O(B^3) with bounded B+k+1 state"
+}

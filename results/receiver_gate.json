@@ -1,0 +1,8 @@
+{
+  "completed": true,
+  "inputs": 718,
+  "corruptions_checked": 1436,
+  "local_checks": "syntax/order/time/modulo/nonnegativity/duration/nondecreasing energy",
+  "sender_assertions": "continuous P/E error relative to the prepared reference; sparse audit lower bounds do not certify the maximum",
+  "checksum": "CRC detects accidental errors and does not authenticate a sender"
+}

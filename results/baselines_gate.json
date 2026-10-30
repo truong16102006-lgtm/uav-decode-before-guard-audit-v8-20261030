@@ -1,0 +1,8 @@
+{
+  "completed": true,
+  "inputs": 718,
+  "attempts": 10052,
+  "actual_wires": 10023,
+  "seconds": 126.8944702000008,
+  "iso_scope": "718 original 120s benchmark records; finite operational parameter catalogues, not arbitrary real tolerances"
+}

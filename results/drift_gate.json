@@ -1,0 +1,6 @@
+{
+  "completed": true,
+  "inputs": 718,
+  "rows": 2154,
+  "note": "Delta feedback is an adverse control: absolute fields are not uniquely necessary for low lossless drift; they support independent resynchronization."
+}

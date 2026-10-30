@@ -1,0 +1,13 @@
+dataset,profile,records,events,exposure_hours,events_per_hour,poisson_low95,poisson_high95,caution
+AMOVFLY,coarse,270,10,42.26569444444444,0.23659850220003747,0.11345817829719244,0.4351130694466816,descriptive Poisson interval ignores episode clustering and does not establish a stationary future hazard
+AMOVFLY,fine,270,2,43.58,0.04589261128958238,0.005557808135474186,0.1657798914117476,descriptive Poisson interval ignores episode clustering and does not establish a stationary future hazard
+AMOVFLY,medium,270,10,42.86388888888889,0.23329661071868318,0.1118747929886382,0.42904077345126046,descriptive Poisson interval ignores episode clustering and does not establish a stationary future hazard
+CMU,coarse,206,15,4.594027777777778,3.265108685793754,1.8274565455162157,5.385300235048465,descriptive Poisson interval ignores episode clustering and does not establish a stationary future hazard
+CMU,fine,206,0,4.873888888888889,0.0,0.0,0.7568657263655629,descriptive Poisson interval ignores episode clustering and does not establish a stationary future hazard
+CMU,medium,206,3,4.816527777777778,0.6228553303151763,0.12844774315431037,1.8202475879392348,descriptive Poisson interval ignores episode clustering and does not establish a stationary future hazard
+IDF,coarse,230,0,22.915555555555557,0.0,0.0,0.16097709022025514,descriptive Poisson interval ignores episode clustering and does not establish a stationary future hazard
+IDF,fine,230,0,22.915555555555557,0.0,0.0,0.16097709022025514,descriptive Poisson interval ignores episode clustering and does not establish a stationary future hazard
+IDF,medium,230,0,22.915555555555557,0.0,0.0,0.16097709022025514,descriptive Poisson interval ignores episode clustering and does not establish a stationary future hazard
+Solar,coarse,12,0,6.0,0.0,0.0,0.6148132423523226,descriptive Poisson interval ignores episode clustering and does not establish a stationary future hazard
+Solar,fine,12,0,6.0,0.0,0.0,0.6148132423523226,descriptive Poisson interval ignores episode clustering and does not establish a stationary future hazard
+Solar,medium,12,0,6.0,0.0,0.0,0.6148132423523226,descriptive Poisson interval ignores episode clustering and does not establish a stationary future hazard
