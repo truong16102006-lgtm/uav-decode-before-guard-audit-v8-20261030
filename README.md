@@ -1,6 +1,8 @@
 # Decode-before-guard UAV telemetry audit
 
-This repository contains executable round-2 audit code, declared configuration, seeds and record-level derived evaluation results. It does not redistribute the original datasets or their encoded sample fields, and it does not contain a manuscript or finalized author list. No Zenodo record or DOI has been issued.
+This repository contains executable round-2 audit code, declared configuration, seeds and record-level derived evaluation results for **Decode-Before-Guard Compression for UAV Energy Telemetry**. The latest 15-page manuscript is available at [`paper/UAV_Energy_Conserving_Compression.pdf`](paper/UAV_Energy_Conserving_Compression.pdf). The paper presents a streaming compressor that decodes candidate packets before checking power error, prefix-energy error, nonnegativity and segment duration.
+
+The repository does not redistribute the original datasets or their encoded sample fields. Reproduction requires authorized local inputs under their source terms. No Zenodo DOI is claimed in this repository until a public record has actually been created and verified.
 
 Python 3.13 and the pinned requirements are required. The numerical certification concerns the explicitly prepared piecewise-linear references, not physical sensor calibration, radio-energy savings or unobserved erased interiors. Solar is one descriptive campaign.
 
@@ -18,3 +20,5 @@ The single command replays the isolated legacy gate, new codec comparisons, loss
 ## Scope and negative results
 
 See `PROTOCOL.md`, `CHANGELOG_VI.md` and `NOT_COMPLETED_VI.md`. All-attempt costs retain refused encodings. Finite-catalogue iso-guard searches are not global optimization over real tolerances, and the byte oracle applies only to fixed nearest-rounded nodes. Common ULEB recoding preserves actual decoded fields and is distinct from native format performance.
+
+The numerical guarantees apply to the prepared piecewise-linear reference and decoded wire values. They do not establish physical sensor accuracy, erased-data recovery, radio-energy savings or prospective flight reliability.

@@ -2,7 +2,7 @@
 
 This v8 extension is exploratory and motivated by the retained v7 outcomes and the supplied round-2 prompt. No new v8 numerical experiment may run until the isolated Step-0 replay passes and its differences are reported. Source preparation and code authoring may proceed while Paper 1 is running, but paper-specific experiment execution and completion follow the user's order 1 → 2 → 3. Seed 20261030. Never mutate v7 results/wires. Freeze the opening, preserve adverse findings, include refusals in denominators and every application header/control/fallback byte.
 
-Priority: E1, M1+M2, M3, E2+E3, E4, P1, P2, P6, P3, P5, P4. Zenodo/DOI is explicitly deferred by the user because author identities are not final. No Zenodo record or DOI request is authorized now. Public GitHub code/results remains an earlier explicit P6 request, excluding provisional manuscripts/authorship and raw sources without redistribution basis.
+Priority: E1, M1+M2, M3, E2+E3, E4, P1, P2, P6, P3, P5, P4. Zenodo publication is permitted only after author metadata and the exact public artifact have been reviewed. Public GitHub code/results excludes raw sources without a redistribution basis.
 
 ## Continuous numerical reference
 
@@ -56,7 +56,7 @@ Receiver checks cover syntax/order, qmin, duration and applicable energy monoton
 
 Quantify raw irregular versus prepared-grid discrepancy with matched source intervals and stated duplicate/gap handling; do not compare different populations silently. Medium 2D power×energy grid uses power {12.5,25,50} W and energy {.0005,.001,.002} Wh, retaining all attempted inputs. Compiled Numba kernels use the same arithmetic contract and per-guard timing; MCU cycles remain unmeasured if no verified emulator/toolchain is available. State the fixed L/h complexity rather than claiming embedded deployment.
 
-Keep one canonical 12–15-page LNCS PDF with concise Sections 3–7, a notation box, separate baseline/statistical subsections and integrated comparison/claim-evidence appendices. Raw tables and rerunnable code remain in the evidence package. Public-code availability must report only a real successful GitHub release URL; no fake DOI and no Zenodo operation while deferred. Any unexecuted optional work receives an explicit not-run entry and loses its associated claim.
+Keep one canonical 12–15-page LNCS PDF with concise Sections 3–7, a notation box, separate baseline/statistical subsections and integrated comparison/claim-evidence appendices. Raw tables and rerunnable code remain in the evidence package. Public-code availability must report only a real successful GitHub release URL; DOI metadata must be added only after a real Zenodo record is verified. Any unexecuted optional work receives an explicit not-run entry and loses its associated claim.
 
 ## Clarifications added during source preparation, before Step 0 and before any v8 numeric run
 

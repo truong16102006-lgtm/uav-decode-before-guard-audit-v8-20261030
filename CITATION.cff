@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: "Decode-Before-Guard Compression for UAV Energy Telemetry"
+message: "If you use this repository or the accompanying manuscript, please cite it."
+type: software
+authors:
+  - family-names: Truong
+    given-names: "Phan Tan Nhat"
+    email: truongptnse200033@fpt.edu.vn
+    affiliation: "FPT University, Ho Chi Minh City, Vietnam"
+  - family-names: Ngan
+    given-names: "Bui Thi Thanh"
+    email: buithithanhngan0311@gmail.com
+    affiliation: "University of Social Sciences and Humanities, Ho Chi Minh City, Vietnam; Viet Nam National University Ho Chi Minh City, Ho Chi Minh City, Vietnam"
+date-released: 2026-11-02
+repository-code: "https://github.com/truong16102006-lgtm/uav-decode-before-guard-audit-v8-20261030"
+version: "2026.11.02"
